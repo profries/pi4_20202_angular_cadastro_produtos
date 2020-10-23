@@ -1,0 +1,15 @@
+<h3>Formulário de Produtos</h3>
+
+<!-- <input [value]='nome' (input)="logar($event)"> -->
+<label for="nome">Nome: </label>
+<input [(ngModel)]=nome id='nome'>
+{{nome}}
+<br />
+
+<button (click)='cadastrar()'>Cadastrar</button>
+{{mensagem}}
+
+<ul>
+    <li *ngFor='let nomeProd of nomes'>{{nomeProd}}</li>
+</ul>
+
