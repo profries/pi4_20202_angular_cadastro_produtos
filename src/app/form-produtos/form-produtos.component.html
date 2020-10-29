@@ -1,15 +1,25 @@
 <h3>Formulário de Produtos</h3>
 
 <!-- <input [value]='nome' (input)="logar($event)"> -->
+<label for="id">Id: </label>
+<input [(ngModel)]="produto.id" id='id'>
+{{produto.id}}
+<br />
+
 <label for="nome">Nome: </label>
-<input [(ngModel)]=nome id='nome'>
-{{nome}}
+<input [(ngModel)]="produto.nome" id='nome'>
+{{produto.nome}}
+<br />
+
+<label for="preco">Preço: </label>
+<input [(ngModel)]="produto.preco" id='preco'>
+{{produto.preco}}
 <br />
 
 <button (click)='cadastrar()'>Cadastrar</button>
 {{mensagem}}
 
 <ul>
-    <li *ngFor='let nomeProd of nomes'>{{nomeProd}}</li>
+    <li *ngFor='let prod of produtos'>{{prod.id}} - {{prod.nome}},{{prod.preco}} </li>
 </ul>
 

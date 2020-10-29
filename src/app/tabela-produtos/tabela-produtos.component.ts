@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tabela-produtos',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tabela-produtos.component.css']
 })
 export class TabelaProdutosComponent implements OnInit {
+@Input() nome: string;
 
   produtos = [
     {id: 1, nome: 'Prod1', preco: 10},

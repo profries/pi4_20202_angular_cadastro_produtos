@@ -8,17 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class FormProdutosComponent implements OnInit {
 
   mensagem = '';
-  nome = '';
-  nomes = [];
+  produto = {id: 0, nome: '', preco: 0.0};
+  produtos = [];
   constructor() { }
 
   ngOnInit(): void {
   }
 
   cadastrar() {
-    this.nomes.push(this.nome);
-    this.mensagem = this.nome + ' cadastrado com sucesso';
-    this.nome = '';
+    this.produtos.push(this.produto);
+    this.mensagem = this.produto.nome + ' cadastrado com sucesso';
+    this.produto = {id: 0, nome: '', preco: 0.0};
   }
 
   // logar(event) {
